@@ -29,6 +29,12 @@ httpd_module 'socache_shmcb' do
   action :create
 end
 
+httpd_config 'documentroot_config' do
+  config_name 'documentroot'
+  source 'documentroot.conf.erb'
+  action :create
+end
+
 httpd_config 'ssl_config' do
   config_name 'ssl'
   source 'mod_ssl.conf.erb'
